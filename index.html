@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Csendom Bálint - Villamosmérnök & Automatizálási Mérnök</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .lang-en { display: none; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-900">
+
+    <!-- Navigáció -->
+    <nav class="fixed top-0 left-0 w-full bg-slate-900/90 backdrop-blur-md border-b border-slate-800 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <span class="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">CSB</span>
+            <div class="flex items-center space-x-6">
+                <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
+                    <a href="#home" class="hover:text-cyan-400 transition-colors lang-hu">Kezdőlap</a>
+                    <a href="#home" class="hover:text-cyan-400 transition-colors lang-en">Home</a>
+                    <a href="#about" class="hover:text-cyan-400 transition-colors lang-hu">Rezümé</a>
+                    <a href="#about" class="hover:text-cyan-400 transition-colors lang-en">About</a>
+                    <a href="#gallery" class="hover:text-cyan-400 transition-colors lang-hu">Hardverek</a>
+                    <a href="#gallery" class="hover:text-cyan-400 transition-colors lang-en">Hardware</a>
+                    <a href="#experience" class="hover:text-cyan-400 transition-colors lang-hu">Tapasztalat</a>
+                    <a href="#experience" class="hover:text-cyan-400 transition-colors lang-en">Experience</a>
+                    <a href="#recommendation" class="hover:text-cyan-400 transition-colors lang-hu">Ajánlás</a>
+                    <a href="#recommendation" class="hover:text-cyan-400 transition-colors lang-en">Recommendation</a>
+                </div>
+                <!-- Nyelvváltó gombok -->
+                <div class="flex bg-slate-800 p-1 rounded-lg border border-slate-700">
+                    <button onclick="setLang('hu')" id="btn-hu" class="px-2.5 py-1 text-xs font-bold rounded-md bg-cyan-500 text-slate-900 transition-all">HU</button>
+                    <button onclick="setLang('en')" id="btn-en" class="px-2.5 py-1 text-xs font-bold rounded-md text-slate-400 hover:text-white transition-all">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Fejléc -->
+    <section id="home" class="pt-32 pb-16 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight mb-4">Csendom Bálint</h1>
+            <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-8 lang-hu">Villamosmérnök / Automatizálási Mérnök</p>
+            <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-8 lang-en">Electrical Engineer / Automation Engineer</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-10 text-sm">
+                <div class="flex items-center justify-center p-3 bg-slate-800/60 rounded-xl border border-slate-700">
+                    <i class="fa-solid fa-phone text-cyan-400 mr-3"></i>
+                    <a href="tel:+36702590021" class="hover:text-cyan-400 transition-colors">+36 70 259 0021</a>
+                </div>
+                <div class="flex items-center justify-center p-3 bg-slate-800/60 rounded-xl border border-slate-700">
+                    <i class="fa-solid fa-envelope text-cyan-400 mr-3"></i>
+                    <a href="mailto:csendomb@gmail.com" class="hover:text-cyan-400 transition-colors">csendomb@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="flex justify-center space-x-4">
+                <a href="https://www.linkedin.com/in/csendom-b%C3%A1lint-446653417/" target="_blank" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white rounded-xl border border-slate-700 font-medium inline-flex items-center transition-all">
+                    <i class="fa-brands fa-linkedin text-cyan-400 mr-2 text-lg"></i> LinkedIn
+                </a>
+                <a href="https://debrecentvszerelo.webnode.hu/" target="_blank" class="px-5 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-xl font-medium inline-flex items-center transition-all shadow-lg shadow-cyan-500/10">
+                    <i class="fa-solid fa-globe mr-2"></i> Portfolio / Weboldal
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Szakmai Összegzés -->
+    <section id="about" class="py-12 max-w-4xl mx-auto px-4">
+        <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/60">
+            <h2 class="text-2xl font-bold text-white mb-4 flex items-center lang-hu">
+                <i class="fa-solid fa-user-tie text-cyan-400 mr-3"></i> Szakmai Összegzés
+            </h2>
+            <h2 class="text-2xl font-bold text-white mb-4 flex items-center lang-en">
+                <i class="fa-solid fa-user-tie text-cyan-400 mr-3"></i> Professional Summary
+            </h2>
+            <p class="text-slate-300 leading-relaxed text-justify lang-hu">
+                Több, mint 15 éves nagyipari automatizálási, villamosmérnöki és komplex diagnosztikai tapasztalattal rendelkező szakember. Gyakorlattal bírok zöldmezős, high-tech gyártási környezetben (BMW Group, Krones) üzemelő nagyméretű automatizált rendszerek, PLC-hálózatok és folyamatfelügyeleti/folyamatirányítási architektúrák (BMS/SCADA) operatív üzemeltetésében, hibaelhárításában és finomhangolásában. Rendszerszemléletű mérnökként megfelelő háttérrel rendelkezem a gyökérok-elemzés (Root Cause Analysis, 8D), a smart eszközök rendszerszintű illesztése és a validált mérnöki dokumentáció terén. Műszaki oktatói és vizsgáztatói múltam révén gyakorlatom van a karbantartói és kezelőszemélyzet rendszerszintű képzésében.
+            </p>
+            <p class="text-slate-300 leading-relaxed text-justify lang-en">
+                Professional with over 15 years of experience in industrial automation, electrical engineering, and complex diagnostics. Proven track record in greenfield, high-tech manufacturing environments (BMW Group, Krones) operating large-scale automated systems, PLC networks, and process monitoring/control architectures (BMS/SCADA). Systems-oriented engineer with strong expertise in Root Cause Analysis (8D), system integration of smart devices, and validated engineering documentation. Experienced technical trainer and national examiner for maintenance and operating personnel.
+            </p>
+        </div>
+    </section>
+
+    <!-- Technológiai Képgaléria -->
+    <section id="gallery" class="py-12 max-w-4xl mx-auto px-4">
+        <h2 class="text-2xl font-bold text-white mb-6 flex items-center lang-hu">
+            <i class="fa-solid fa-microchip text-cyan-400 mr-3"></i> Alkalmazott Technológiai Környezet & Hardverek
+        </h2>
+        <h2 class="text-2xl font-bold text-white mb-6 flex items-center lang-en">
+            <i class="fa-solid fa-microchip text-cyan-400 mr-3"></i> Applied Technology & Hardware
+        </h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
+                <img src="https://images.unsplash.com/photo-1618042164219-62c820f10723?auto=format&fit=crop&q=80&w=400" alt="Siemens PLC" class="w-full h-40 object-cover hover:scale-105 transition-transform duration-300">
+                <div class="p-3 text-xs font-semibold text-center text-slate-300">Siemens S7-1200 & TIA Portal</div>
+            </div>
+            <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400" alt="Integrált áramkör" class="w-full h-40 object-cover hover:scale-105 transition-transform duration-300">
+                <div class="p-3 text-xs font-semibold text-center text-slate-300">IC & Component Diagnostics</div>
+            </div>
+            <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=400" alt="Szenzorok" class="w-full h-40 object-cover hover:scale-105 transition-transform duration-300">
+                <div class="p-3 text-xs font-semibold text-center text-slate-300">Smart Sensors & Devices</div>
+            </div>
+            <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400" alt="HMI folyamatfelügyelet" class="w-full h-40 object-cover hover:scale-105 transition-transform duration-300">
+                <div class="p-3 text-xs font-semibold text-center text-slate-300">BMS / SCADA Interfaces</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Szakmai Tapasztalatok -->
+    <section id="experience" class="py-12 bg-slate-900/50 border-y border-slate-800">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-white mb-8 flex items-center justify-center lang-hu">
+                <i class="fa-solid fa-briefcase text-cyan-400 mr-3"></i> Szakmai Tapasztalat
+            </h2>
+            <h2 class="text-2xl font-bold text-white mb-8 flex items-center justify-center lang-en">
+                <i class="fa-solid fa-briefcase text-cyan-400 mr-3"></i> Professional Experience
+            </h2>
+            
+            <div class="space-y-8 relative border-l-2 border-slate-700 ml-2 pl-6">
+                <!-- Dome -->
+                <div class="bg-slate-800/30 p-6 rounded-xl border border-slate-700/50">
+                    <span class="text-xs font-bold text-cyan-400 bg-cyan-500/10 px-2 py-1 rounded">2024 – 2026</span>
+                    <h3 class="text-xl font-bold text-white mt-2 lang-hu">Épületautomatizálási specialista, támogató mérnök</h3>
+                    <h3 class="text-xl font-bold text-white mt-2 lang-en">Building Automation Specialist, Support Engineer</h3>
+                    <p class="text-slate-400 text-sm font-medium mb-3">Dome Facility Services Group Kft. | BMW Group Plant Debrecen</p>
+                    <ul class="space-y-1.5 text-slate-300 text-sm list-disc pl-4 lang-hu">
+                        <li>Komplex automatizálási és folyamatirányító rendszerek beindítása, tesztelése (Commissioning).</li>
+                        <li>Kivitelezői és installációs hibák feltárása (százas nagyságrendben az első évben).</li>
+                        <li>Összetett hibák elemzése, hivatalos 8D riportok készítése (Gyökérok-elemzés - RCA).</li>
+                        <li>BMS folyamatfelügyeleti rendszerek üzemeltetése és smart eszközök hálózati illesztése.</li>
+                    </ul>
+                    <ul class="space-y-1.5 text-slate-300 text-sm list-disc pl-4 lang-en">
+                        <li>Commissioning and testing of complex building automation and process control systems.</li>
+                        <li>Identification of hundred-plus installation and automation faults in the first year to prevent downtime.</li>
+                        <li>Root Cause Analysis (RCA) and compilation of official 8D reports for complex technical issues.</li>
+                        <li>Operational management of BMS systems, network integration and tuning of smart field devices.</li>
+                    </ul>
+                </div>
+
+                <!-- Krones -->
+                <div class="bg-slate-800/30 p-6 rounded-xl border border-slate-700/50">
+                    <span class="text-xs font-bold text-slate-400 bg-slate-800 px-2 py-1 rounded">2020 – 2024</span>
+                    <h3 class="text-xl font-bold text-white mt-2 lang-hu">Épületkarbantartó mérnök</h3>
+                    <h3 class="text-xl font-bold text-white mt-2 lang-en">Facility Maintenance Engineer</h3>
+                    <p class="text-slate-400 text-sm font-medium mb-3">Krones Hungary Kft.</p>
+                    <ul class="space-y-1.5 text-slate-300 text-sm list-disc pl-4 lang-hu">
+                        <li>Modern, automatizált gyáregység villamos hálózatának és elosztóberendezéseinek tervezett és eseti karbantartása.</li>
+                        <li>Gyártóberendezések és biztonsági rendszerek elektronikai és szoftveres PLC hibaelhárítása.</li>
+                        <li>Karbantartási és üzemeltetési feladatok rendszerszintű követése SAP rendszerben.</li>
+                    </ul>
+                    <ul class="space-y-1.5 text-slate-300 text-sm list-disc pl-4 lang-en">
+                        <li>Preventive and corrective maintenance of electrical distribution grids and automated building systems.</li>
+                        <li>Electronic and software-level PLC troubleshooting of manufacturing machinery and safety networks.</li>
+                        <li>Digital maintenance management, task tracking, and meticulous documentation using SAP.</li>
+                    </ul>
+                </div>
+
+                <!-- Trainer -->
+                <div class="bg-slate-800/30 p-6 rounded-xl border border-slate-700/50">
+                    <span class="text-xs font-bold text-slate-400 bg-slate-800 px-2 py-1 rounded">2000 – 2020</span>
+                    <h3 class="text-xl font-bold text-white mt-2 lang-hu">Műszaki tréner és instruktor (Technical Trainer)</h3>
+                    <h3 class="text-xl font-bold text-white mt-2 lang-en">Technical Trainer & Instructor</h3>
+                    <p class="text-slate-400 text-sm font-medium mb-3">DSZC / SZTÁV Zrt. / Egyéni vállalkozás</p>
+                    <ul class="space-y-1.5 text-slate-300 text-sm list-disc pl-4 lang-hu">
+                        <li>Karbantartói személyzet szakmai betanítása, on-boarding és TPM/5S támogatás.</li>
+                        <li>Mechatronikai, elektronikai és PLC programozási képzési kurrikulumok kidolgozása.</li>
+                        <li>Országos szakmai vizsgabizottsági tevékenység ellátása.</li>
+                    </ul>
+                    <ul class="space-y-1.5 text-slate-300 text-sm list-disc pl-4 lang-en">
+                        <li>Professional technical training and onboarding of maintenance staff, driving TPM/5S methodology.</li>
+                        <li>Curriculum design and delivery for industrial mechatronics, electronics, and PLC training.</li>
+                        <li>Active role as an authorized member of national professional examination boards.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Készségek & Tanulmányok -->
+    <section class="py-12 max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Skills -->
+        <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50">
+            <h3 class="text-xl font-bold text-white mb-4 lang-hu">Készségek & Technológiák</h3>
+            <h3 class="text-xl font-bold text-white mb-4 lang-en">Skills & Technologies</h3>
+            <div class="space-y-3 text-sm">
+                <div>
+                    <span class="text-xs font-semibold text-slate-400 block mb-1">Automation</span>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="bg-cyan-500/10 text-cyan-400 px-2 py-0.5 rounded text-xs">PLC (Siemens S7-1200, TIA Portal)</span>
+                        <span class="bg-cyan-500/10 text-cyan-400 px-2 py-0.5 rounded text-xs">BMS-BAS</span>
+                        <span class="bg-cyan-500/10 text-cyan-400 px-2 py-0.5 rounded text-xs">SCADA / HMI</span>
+                        <span class="bg-cyan-500/10 text-cyan-400 px-2 py-0.5 rounded text-xs">C++</span>
+                    </div>
+                </div>
+                <div>
+                    <span class="text-xs font-semibold text-slate-400 block mb-1">Quality & Methodology</span>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-xs">RCA (8D)</span>
+                        <span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-xs">TPM & 5S</span>
+                        <span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-xs">SAP</span>
+                        <span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-xs">GMP Docs</span>
+                    </div>
+                </div>
+                <div class="pt-2 border-t border-slate-700/50">
+                    <span class="lang-hu"><strong>Angol:</strong> B2 szint (Erős szakmai passzív, dokumentációértés)</span>
+                    <span class="lang-en"><strong>English:</strong> B2 Level (Strong professional passive, technical docs)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Studies -->
+        <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50">
+            <h3 class="text-xl font-bold text-white mb-4 lang-hu">Tanulmányok</h3>
+            <h3 class="text-xl font-bold text-white mb-4 lang-en">Education</h3>
+            <div class="space-y-4 text-sm">
+                <div>
+                    <h4 class="font-bold text-white">Mérnök Informatikus tanár (MSc)</h4>
+                    <p class="text-slate-400 text-xs">Dunaújvárosi Egyetem</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white">Villamosmérnök (BSc)</h4>
+                    <p class="text-slate-400 text-xs">Debreceni Egyetem</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white">Híradásipari technikus</h4>
+                    <p class="text-slate-400 text-xs">Mechwart András Gépipari Szakközépiskola</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hivatalos Szakmai Ajánlás mint KÉP/GRAFIKA -->
+    <section id="recommendation" class="py-12 max-w-4xl mx-auto px-4 mb-16">
+        <h2 class="text-2xl font-bold text-white mb-6 text-center lang-hu">
+            <i class="fa-solid fa-file-signature text-cyan-400 mr-3"></i> Hivatalos Szakmai Ajánlás
+        </h2>
+        <h2 class="text-2xl font-bold text-white mb-6 text-center lang-en">
+            <i class="fa-solid fa-file-signature text-cyan-400 mr-3"></i> Official Professional Reference
+        </h2>
+        
+        <!-- A4-es Dokumentum Illúzió (Látható Kép / Grafikai Blokként) -->
+        <div class="bg-white text-slate-900 p-8 sm:p-12 rounded-lg shadow-2xl border-t-8 border-cyan-500 max-w-2xl mx-auto relative overflow-hidden transition-transform duration-300 hover:scale-[1.01]">
+            <!-- Biztonsági Vízjel / Mintázat hátul -->
+            <div class="absolute inset-0 opacity-[0.03] pointer-events-none flex items-center justify-center select-none">
+                <i class="fa-solid fa-shield-halved text-[300px]"></i>
+            </div>
+            
+            <!-- Fejléc -->
+            <div class="flex justify-between items-start border-b pb-4 mb-6">
+                <div>
+                    <h4 class="text-cyan-600 font-extrabold text-lg tracking-wider">DOME FACILITY SERVICES</h4>
+                    <p class="text-[10px] text-slate-500">1023 Budapest, Lajos utca 28-32. | Adószám: 12970247-2-41</p>
+                </div>
+                <div class="text-right">
+                    <span class="bg-slate-100 text-slate-700 px-2.5 py-1 rounded text-[10px] font-mono border">DOC-ID: 2026-06-17/BMW</span>
+                </div>
+            </div>
+            
+            <h3 class="text-center font-bold text-xl tracking-widest text-slate-800 uppercase mb-6">AJÁNLÓLEVÉL / REFERENCE LETTER</h3>
+            
+            <!-- Ajánló adatai rács -->
+            <div class="grid grid-cols-2 gap-4 text-xs bg-slate-50 p-3 rounded border mb-6">
+                <div>
+                    <p class="text-slate-400 uppercase text-[9px] font-bold">Kibocsátó / Referent:</p>
+                    <p class="font-bold text-slate-800">Molnár Zoltán</p>
+                    <p class="text-slate-600 text-[11px]">Műszaki Területi szakmai vezető</p>
+                </div>
+                <div>
+                    <p class="text-slate-400 uppercase text-[9px] font-bold">Ajánlott személy / Candidate:</p>
+                    <p class="font-bold text-slate-800">Csendom Bálint Attila</p>
+                    <p class="text-slate-600 text-[11px]">Üzemeltetési specialista</p>
+                </div>
+            </div>
+            
+            <!-- Szöveges részlet -->
+            <div class="text-xs text-slate-700 leading-relaxed space-y-3 text-justify font-serif">
+                <p class="lang-hu">
+                    "Bálint kiemelkedően rövid időn belül beletanult a munkakörébe tartozó feladatokba. Munkavégzését a határidők pontos betartása és a magas szintű precizitás jellemzi. Munkája során számos olyan problémát tárt fel, ami jelentős termeléskiesést vagy berendezés károsodásokat okozhatott volna."
+                </p>
+                <p class="lang-en">
+                    "Bálint mastered his operational tasks in an exceptionally short period of time. His work is characterized by strict adherence to deadlines and high precision. During his tenure, he identified numerous systemic issues that could have caused critical production down-times."
+                </p>
+                <p class="lang-hu">
+                    "Zöldmezős beruházást követő üzemeltetési feladatok megkezdésekor, 1 év leforgása alatt <strong>százas nagyságrendű kivitelezői hibát tárt fel</strong>, megoldásában aktívan részt vett. Proaktív hozzáállásával rendszeresen új megoldási javaslatokkal állt elő."
+                </p>
+                <p class="lang-en">
+                    "During the initial operation phase of the greenfield facility, <strong>he discovered hundreds of contractor and installation execution faults</strong> within a single year, actively leading their resolution. With his proactive attitude, he consistently proposed optimized upgrades."
+                </p>
+            </div>
+            
+            <!-- Aláírás és Kék Pecsét -->
+            <div class="mt-8 pt-6 border-t flex justify-between items-center flex-wrap gap-4">
+                <!-- Kék Körpecsét szimuláció -->
+                <div class="w-20 h-20 rounded-full border-4 border-dashed border-blue-600/60 flex items-center justify-center p-1 rotate-12 select-none">
+                    <div class="w-full h-full rounded-full border-2 border-blue-600/40 flex flex-col items-center justify-center text-[7px] text-blue-600 font-bold uppercase text-center leading-tight">
+                        <span>DOME KFT</span>
+                        <span class="text-[6px] text-blue-500">APPROVED</span>
+                        <span>2026.06.17</span>
+                    </div>
+                </div>
+                
+                <!-- Aláírás -->
+                <div class="text-right">
+                    <p class="font-serif italic text-lg text-blue-800 pr-4 select-none tracking-wider">Molnár Zoltán</p>
+                    <div class="w-36 h-0.5 bg-slate-300 ml-auto my-1"></div>
+                    <p class="text-[10px] font-bold text-slate-500">Molnár Zoltán</p>
+                    <p class="text-[9px] text-slate-400">Műszaki Területi szakmai vezető</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 py-6 border-t border-slate-900 text-center text-xs text-slate-500 font-mono">
+        <p>System.Status: OPERATIONAL | PLC-Network: CONNECTED</p>
+        <p class="mt-1">&copy; 2026 Csendom Bálint. HU/EN Interactive CV.</p>
+    </footer>
+
+    <!-- Interaktív Nyelvváltó Szkript -->
+    <script>
+        function setLang(lang) {
+            const huElements = document.querySelectorAll('.lang-hu');
+            const enElements = document.querySelectorAll('.lang-en');
+            const btnHu = document.getElementById('btn-hu');
+            const btnEn = document.getElementById('btn-en');
+
+            if (lang === 'hu') {
+                huElements.forEach(el => el.style.display = 'block');
+                // Ha inline elem, javítjuk block-ról visszakapcsolásra
+                document.querySelectorAll('span.lang-hu').forEach(el => el.style.display = 'inline');
+                document.querySelectorAll('a.lang-hu').forEach(el => el.style.display = 'inline-block');
+                enElements.forEach(el => el.style.display = 'none');
+                
+                btnHu.className = "px-2.5 py-1 text-xs font-bold rounded-md bg-cyan-500 text-slate-900 transition-all";
+                btnEn.className = "px-2.5 py-1 text-xs font-bold rounded-md text-slate-400 hover:text-white transition-all";
+            } else {
+                huElements.forEach(el => el.style.display = 'none');
+                enElements.forEach(el => el.style.display = 'block');
+                document.querySelectorAll('span.lang-en').forEach(el => el.style.display = 'inline');
+                document.querySelectorAll('a.lang-en').forEach(el => el.style.display = 'inline-block');
+                
+                btnEn.className = "px-2.5 py-1 text-xs font-bold rounded-md bg-cyan-500 text-slate-900 transition-all";
+                btnHu.className = "px-2.5 py-1 text-xs font-bold rounded-md text-slate-400 hover:text-white transition-all";
+            }
+        }
+    </script>
+</body>
+</html>
